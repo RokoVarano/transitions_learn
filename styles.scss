@@ -50,4 +50,48 @@ $trans-time: 1s;
   }
 }
 
+.green {
+  @extend %grow-square;
+
+  background: green;
+  transition: width ($trans-time * 10);
+  transition-timing-function: ease-in;
+
+  //ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+  //linear - specifies a transition effect with the same speed from start to end
+  //ease-in - specifies a transition effect with a slow start
+  //ease-out - specifies a transition effect with a slow end
+  //ease-in-out - specifies a transition effect with a slow start and end
+  //cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function
+
+  &:hover {
+    width: 100%;
+  }
+}
+
+.pink {
+  @extend %grow-square;
+
+  background: pink;
+  transition: width ($trans-time * 0.5), height ($trans-time * 4);
+  transition-delay: $trans-time * 2;
+
+  &:hover {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.purple {
+  width: 100px;
+  height: 50px;
+  background: purple;
+  transition: transform 2s;
+  transition-timing-function: linear;
+
+  &:hover {
+    transform: rotate(2880deg) scale(8);
+  }
+}
+
 @import "node_modules/bootstrap/scss/bootstrap";
