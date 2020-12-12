@@ -1,0 +1,53 @@
+//bootstrap grid config
+
+.alt-grid [class*="col-"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.alt-grid .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.alt-grid .container {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+//bootstrap customization
+
+//my classes
+
+$trans-time: 1s;
+
+%grow-square {
+  width: 100px;
+  height: 100px;
+}
+
+.red {
+  @extend %grow-square;
+
+  background: red;
+  transition: width ($trans-time * 2);
+
+  &:hover {
+    width: 300px;
+  }
+}
+
+.blue {
+  @extend %grow-square;
+
+  background: blue;
+  transition: width ($trans-time * 2), height ($trans-time * 4);
+
+  &:hover {
+    width: 300px;
+    height: 50px;
+  }
+}
+
+@import "node_modules/bootstrap/scss/bootstrap";

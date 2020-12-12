@@ -2,3 +2,13 @@
 *.css.map
 *.sass.map
 *.scss.map
+
+.hintrc
+
+.stylelintrc.json
+
+package-lock.json
+
+styles.css
+
+node_modules/
